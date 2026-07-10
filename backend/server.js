@@ -62,12 +62,6 @@ app.use("/api/reservations", reservationRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-try {
-  await connectDB();
-} catch (error) {
-  console.error("Failed to connect to MongoDB:", error);
-}
-
 export default app;
 
 if (process.argv[1] === __filename) {
